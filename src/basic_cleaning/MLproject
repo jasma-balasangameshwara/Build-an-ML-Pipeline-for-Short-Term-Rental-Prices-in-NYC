@@ -5,18 +5,31 @@ entry_points:
   main:
     parameters:
 
-      parameter1:
-        description: ## ADD DESCRIPTION
-        type: string
+      input_artifact:
+        description: Name for the input artifact
+        type: str
 
-       parameter2:
-        description: ## ADD DESCRIPTION
-        type: string
+      output_artifact:
+        description: Name for the output artifact
+        type: str
 
-       parameter3:
-        description: ## ADD DESCRIPTION
-        type: string
+      output_type:
+        description: Type for the output artifact
+        type: str
+
+      min_price:
+        description: minimum price
+        type: float
+
+      max_price:
+        description: maximum price
+        type: float
+
 
 
     command: >-
-        python run.py  --parameter1 {parameter1}  -- parameter2 { parameter2}  -- parameter3 { parameter3} 
+        python run.py   --input_artifact {input_artifact} \
+                        --output_artifact {output_artifact} \
+                        --output_type {output_type} \
+                        --min_price {min_price} \
+                        --max_price {max_price} 
