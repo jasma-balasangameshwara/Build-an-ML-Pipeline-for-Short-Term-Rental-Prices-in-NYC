@@ -62,7 +62,7 @@ def go(config: DictConfig):
                     "max_price": config['etl']['max_price'],
                 },
             )
-
+        # Issue loading jupyter notebook -
         if "data_check" in active_steps:
             ##################
             # Implement here #
