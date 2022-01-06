@@ -62,12 +62,23 @@ def go(config: DictConfig):
                     "max_price": config['etl']['max_price'],
                 },
             )
-        # Issue loading jupyter notebook -
+
         if "data_check" in active_steps:
             ##################
             # Implement here #
             ##################
-            pass
+            os.environ["WANDB_PROJECT"] = config["data_check"]["project_name"]
+            _ = mlflow.run(
+                os.path.join(hydra.utils.get_original_cwd(), "src", "data_check"),
+                "main",
+                parameters={
+                    "csv": "basic_cleaned_data.csv:latest",
+                    "ref": "basic_cleaned_data.csv:reference",
+                    "kl_threshold": config["data_check"]["kl_threshold"],
+                    "min_price": config['etl']['min_price'],
+                    "max_price": config['etl']['max_price']
+                },
+            )
 
         if "data_split" in active_steps:
             ##################
