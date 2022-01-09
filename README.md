@@ -567,3 +567,9 @@ you have trained your new model on the new data.
 ## License
 
 [License](LICENSE.txt)
+
+## Github Repository
+#https://github.com/jasma-balasangameshwara/nd0821-c2-build-model-workflow-starter/tree/v1.0.1
+
+##Wandb Public Project
+#https://wandb.ai/jasmab/nyc_airbnb?workspace=user-jasmab
