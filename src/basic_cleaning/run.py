@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Performs basic cleaning on the data and saves the results in Weights & Biases parameters.
+Performs basic cleaning on the dataset and saves the results as Weights & Biases parameters.
 """
 import argparse
 import logging
