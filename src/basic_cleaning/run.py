@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Performs basic cleaning on the dataset and saves the results as Weights & Biases parameters.
+Performs basic cleaning on the dataset and saves the results as Weights & Biases parameters. The free version of W&B is used for this project. 
 """
 import argparse
 import logging
